@@ -14,7 +14,6 @@ class Kalender {
 		$this->datum_info = getdate( strtotime( mktime( 0,0,0,$this->maand,1,$this->jaar) ) );
 		$this->dag_vd_week = $this->datum_info['wday'];
 	}
-	//hoi
 	public function show(){
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
@@ -25,7 +24,6 @@ class Kalender {
 		foreach ( $this->dagen_vd_week as $dag ){
 			$output .= '<th class="header">' . $dag . '</th>';
 		}
-ewrew
 		//
 	}
 }
