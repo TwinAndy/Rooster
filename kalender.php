@@ -50,13 +50,14 @@ function build_kalender($maand, $jaar, $datumArray){
   return $kalender;
 }
 ?>
-
+<!--
 <!DOCTYPE html>
 <html>
 	<head>
 
 	</head>
 	<body>
-		
+		<?php echo build_kalender(11, 2018); ?>
 	</body>
 </html>
+-->

@@ -63,6 +63,7 @@ class Kalender {
 	}
 }
 ?>
+<!--
 <!DOCTYPE html>
 <html>
 	<head>
@@ -75,3 +76,4 @@ class Kalender {
 		?>
 	</body>
 </html>
+-->
