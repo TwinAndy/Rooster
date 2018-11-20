@@ -58,6 +58,6 @@ function build_kalender($maand, $jaar, $datumArray){
 
 	</head>
 	<body>
-		<?php echo build_kalender(11, 2018); ?>
+		
 	</body>
 </html>
