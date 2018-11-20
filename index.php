@@ -1,5 +1,5 @@
 <?php
-
+class Kalender{
 function build_kalender($maand, $jaar, $datumArray){
   $dagenVdWeek = array('Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag','Zondag');
   $eersteDag = mktime(0,0,0,$maand,1,$jaar);
@@ -49,18 +49,8 @@ function build_kalender($maand, $jaar, $datumArray){
 
   return $kalender;
 }
+}
 ?>
-<!--
-<!DOCTYPE html>
-<html>
-	<head>
-
-	</head>
-	<body>
-		<?php echo build_kalender(11, 2018); ?>
-	</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html>
@@ -69,5 +59,6 @@ function build_kalender($maand, $jaar, $datumArray){
 	</head>
 	<body>
 		hoi
+		<?php echo build_kalender(11,2018); ?>
 	</body>
 </html>
