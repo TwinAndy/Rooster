@@ -34,7 +34,7 @@ class Kalender {
 			$output .= 'td colspan="' . 6 . '"></td>';
 		}else if($this ->dag_vd_week > 0){
 			//hier moet misschien --$this
-			$output = '<td colspan="' . $this->dag_vd_week . '"></td>';
+			$output .= '<td colspan="' . $this->dag_vd_week . '"></td>';
 		}
 
 		$vandaag = 1;
