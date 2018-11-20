@@ -49,7 +49,6 @@ function build_kalender($maand, $jaar, $datumArray){
 
   return $kalender;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -58,6 +57,6 @@ function build_kalender($maand, $jaar, $datumArray){
 
 	</head>
 	<body>
-		
+		hoi
 	</body>
 </html>
