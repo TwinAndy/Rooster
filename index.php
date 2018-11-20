@@ -19,7 +19,7 @@ class Kalender {
 	public function show(){
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
-		$output .= '<caption>' . $this->datum_info['maand'] . ' ' . $this->jaar . '</caption>';
+		$output .= '<caption>' . $this->datum_info['month'] . ' ' . $this->jaar . '</caption>';
 		$output .= '<tr>';
 
 		//Dagen van de week header
