@@ -19,6 +19,7 @@ class Kalender {
 	public function show(){
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
+				//Maand naam word niet laten zien
 		$output .= '<caption>' . $this->datum_info['month'] . ' ' . $this->jaar . '</caption>';
 		$output .= '<tr>';
 
