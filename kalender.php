@@ -6,7 +6,13 @@ class Kalender {
 	private $aantal_dagen;
 	private $datum_info;
 	private $dag_vd_week;
-
+/*
+	public function __construct($maand, $jaar, $dagen_vd_week = array('Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag')){
+		$this->maand = $maand;
+		$this->jaar = $jaar;
+		$this->dagen_vd_week = $dagen_vd_week; //Dagen namen
+		$this->aantal_dagen;
+	}*/
 	public function __construct( $maand, $jaar, $dagen_vd_week = array( 'Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag' ) ){
 		$this->maand = $maand;
 		$this->jaar = $jaar;
@@ -14,7 +20,6 @@ class Kalender {
 		$this->aantal_dagen = cal_days_in_month( CAL_GREGORIAN, $this->maand, $this->jaar );
 		$this->datum_info = getdate( strtotime( mktime( 0,0,0,$this->maand,1,$this->jaar) ) );
 		$this->dag_vd_week = $this->datum_info['wday'];
-		$this->dag_vd_week;
 	}
 	public function show(){
 		// Maand en Jaar titel

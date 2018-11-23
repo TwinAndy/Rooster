@@ -9,7 +9,7 @@ require 'kalender.php';
 	</head>
 	<body>
 		<?php
-		$kalender = new Kalender(11,2018);
+		$kalender = new Kalender(12,2018);
 		$kalender->show();
 		?>
 	</body>
