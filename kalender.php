@@ -23,6 +23,7 @@ class Kalender {
 		$this->dag_vd_week = $this->datum_info['wday'];
 	}
 	public function show(){
+		echo $this->maand . $this->jaar . $this->dagen_vd_week . $this->aantal_dagen . $this->datum_maand . $this->dag_vd_week;
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
 				//Maand naam word niet laten zien
