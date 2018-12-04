@@ -19,13 +19,11 @@ class Kalender {
 		$this->jaar = $jaar;
 		$this->dagen_vd_week = $dagen_vd_week;
 		$this->aantal_dagen = cal_days_in_month( CAL_GREGORIAN, $this->maand, $this->jaar );
-
 		$this->datum_info = getdate(mktime(0,0,0,$this->maand,1,$this->jaar));
 		$this->dag_vd_week = $this->datum_info['wday'];
 		//$this->datum_maand = date("F", mktime(0,0,0, $this->maand + 1, 0, 0));
 	}
 	public function show(){
-		echo $this->info = mktime(0,0,0,$this->maand,1,$this->jaar);
 		echo 'maand nummer' . $this->maand . 'jaar' . $this->jaar . $this->dagen_vd_week . 'aantal dagen' . $this->aantal_dagen . 'maand naam' . $this->datum_info['month'] .  'eerste dag' . $this->dag_vd_week;
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
@@ -40,13 +38,13 @@ class Kalender {
 
 		$output .= '</tr><tr>';
 
-		//start bij dag van de week
-		if ($this->dag_vd_week < 0){
-			$output .= 'td colspan="' . 6 . '"></td>';
-		}else if($this ->dag_vd_week > 0){
-			//hier moet misschien --$this
-			$output .= '<td colspan="' . $this->dag_vd_week . '"></td>';
+
+		//als eerste dag niet maandag is dan opvullen met niks.
+		if($this->dag_vd_week > 1){
+			$output .= '<td colspan=' . $this->dag_vd_week . '"></td>';
 		}
+
+
 
 		$vandaag = 1;
 
