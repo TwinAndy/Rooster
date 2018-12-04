@@ -25,7 +25,7 @@ class Kalender {
 		//$this->datum_maand = date("F", mktime(0,0,0, $this->maand + 1, 0, 0));
 	}
 	public function show(){
-		echo strtotime(mktime(0,0,0,$this->maand,1,$this->jaar));
+		echo $this->info = strtotime(mktime(0,0,0,$this->maand,1,$this->jaar));
 		echo 'maand nummer' . $this->maand . 'jaar' . $this->jaar . $this->dagen_vd_week . 'aantal dagen' . $this->aantal_dagen . 'maand naam' . $this->datum_info['month'] .  'eerste dag' . $this->dag_vd_week;
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
