@@ -19,7 +19,7 @@ class Kalender {
 		$this->jaar = $jaar;
 		$this->dagen_vd_week = $dagen_vd_week;
 		$this->aantal_dagen = cal_days_in_month( CAL_GREGORIAN, $this->maand, $this->jaar );
-		$this->datum_maand = date("F", mktime(0,0,0, ++$this->maand--, 0, 0));
+		$this->datum_maand = date("F", mktime(0,0,0, $this->maand + 1, 0, 0));
 		$this->dag_vd_week = $this->datum_info['wday'];
 	}
 	public function show(){
