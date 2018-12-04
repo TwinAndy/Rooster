@@ -42,6 +42,8 @@ class Kalender {
 		//als eerste dag niet maandag is dan opvullen met niks.
 		if($this->dag_vd_week > 1){
 			$output .= '<td colspan=' . --$this->dag_vd_week . '"></td>';
+		}else if($this->dag_vd_week == 1){
+			$this->dag_vd_week--;
 		}
 
 
