@@ -55,6 +55,7 @@ class Kalender {
 				$this->dag_vd_week = 0;
 				$output .= '</tr><tr>';
 			}
+			//elke keer een nieuwe class
 			$output .= '<td class="dag">' . $vandaag . '</td>';
 
 			$vandaag++;
