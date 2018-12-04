@@ -50,7 +50,7 @@ class Kalender {
 
 		while ( $vandaag <= $this->aantal_dagen ){
 			if ( $this->dag_vd_week == 7 ) {
-				$this->dag_vd_week = 1;
+				$this->dag_vd_week = 0;
 				$output .= '</tr><tr>';
 			}
 			$output .= '<td class="dag">' . $vandaag . '</td>';
