@@ -19,16 +19,17 @@ class Kalender {
 		$this->jaar = $jaar;
 		$this->dagen_vd_week = $dagen_vd_week;
 		$this->aantal_dagen = cal_days_in_month( CAL_GREGORIAN, $this->maand, $this->jaar );
-		//$this->datum_maand = date("F", mktime(0,0,0, $this->maand + 1, 0, 0));
+
 		$this->datum_info = getdate( strtotime( mktime( 0,0,0,$this->maand,1,$this->jaar) ) );
 		$this->dag_vd_week = $this->datum_info['wday'];
+		//$this->datum_maand = date("F", mktime(0,0,0, $this->maand + 1, 0, 0));
 	}
 	public function show(){
-		echo 'maand nummer' . $this->maand . 'jaar' . $this->jaar . $this->dagen_vd_week . 'aantal dagen' . $this->aantal_dagen . 'maand naam' . $this->datum_maand .  'eerste dag' . $this->dag_vd_week;
+		echo 'maand nummer' . $this->maand . 'jaar' . $this->jaar . $this->dagen_vd_week . 'aantal dagen' . $this->aantal_dagen . 'maand naam' . $this->datum_info['month'] .  'eerste dag' . $this->dag_vd_week;
 		// Maand en Jaar titel
 		$output = '<table class="kalender">';
 				//Maand naam word niet laten zien
-		$output .= '<caption>' . $this->datum_maand/*[month]*/ . ' ' . $this->jaar . '</caption>';
+		$output .= '<caption>' . $this->datum_info['month']/*[month]*/ . ' ' . $this->jaar . '</caption>';
 		$output .= '<tr>';
 
 		//Dagen van de week header
