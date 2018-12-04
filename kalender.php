@@ -49,11 +49,10 @@ class Kalender {
 		$vandaag = 1;
 
 		while ( $vandaag <= $this->aantal_dagen ){
-			if ( $this->dag_vd_week == 8 ) {
-				$this->dag_vd_week = 0;
+			if ( $this->dag_vd_week == 7 ) {
+				$this->dag_vd_week = 1;
 				$output .= '</tr><tr>';
 			}
-
 			$output .= '<td class="dag">' . $vandaag . '</td>';
 
 			$vandaag++;
