@@ -14,6 +14,7 @@
           <input type="checkbox" name="afwas" value="afwas" />Afwas
           <input type="checkbox" name="bediening" value="bediening" />Bediening
           <input type="checkbox" name="keuken" value="keuken" />Keuken
+          <button type="submit" name="submit">Registreer nieuwe werknemer</button>
         </form>
       </div>
     </div>
