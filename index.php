@@ -1,10 +1,10 @@
 <?php
-require 'kalender.php';
+require 'php/kalender.php';
 
 if(session_status()!=PHP_SESSION_ACTIVE) {
 	session_start();
 }
-
+//Als SESSION een u_id heeft dan doorgestuurd naar home.php
 if(isset($_SESSION['u_id'])){
 	header("Location: home.php");
 }
@@ -14,7 +14,7 @@ if(isset($_SESSION['u_id'])){
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<title>Log in</title>
 	</head>
 	<body>
 		<div class="login">
