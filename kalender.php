@@ -46,8 +46,6 @@ class Kalender {
 			$this->dag_vd_week--;
 		}
 
-
-
 		$vandaag = 1;
 
 		while ( $vandaag <= $this->aantal_dagen ){

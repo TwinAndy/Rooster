@@ -1,5 +1,7 @@
 <?php
 require 'kalender.php';
+
+//HOST = GEARHOST.
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +18,7 @@ require 'kalender.php';
 		<!--
 		KALENDER OPSTELLEN :    $kalender = new Kalender([maand], [jaar])
 		KALENDER VISUALISEREN:	$kalender->show();
-
+	-->
 		<?php
 		$kalender = new Kalender(12,2018);
 		$kalender->show();
@@ -33,6 +35,6 @@ require 'kalender.php';
 	$kalender = new Kalender(1,2018);
 	$kalender->show();
 	?>
--->
+
 	</body>
 </html>
