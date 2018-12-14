@@ -27,7 +27,7 @@
   Werkgever vult email, voor- en achternaam, geboortedatum,
   werkgroep, tijdelijk wachtwoord
 
-  STAP 1.1
+  STAP 1.1 [of niet]
   Werkgever wordt doorgestuurd naar profiel pagina van Werknemer
   Werkgever deelt de werknemer in in werkgroepen
 

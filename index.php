@@ -6,7 +6,7 @@ if(session_status()!=PHP_SESSION_ACTIVE) {
 }
 //Als SESSION een u_id heeft dan doorgestuurd naar home.php
 if(isset($_SESSION['u_id'])){
-	header("Location: home.php");
+	header("Location: dashboard.php");
 }
 //HOST = GEARHOST.
 ?>
@@ -38,6 +38,7 @@ if(isset($_SESSION['u_id'])){
 		KALENDER OPSTELLEN :    $kalender = new Kalender([maand], [jaar])
 		KALENDER VISUALISEREN:	$kalender->show();
 	-->
+	<!--
 		<?php
 		$kalender = new Kalender(12,2018);
 		$kalender->show();
@@ -54,6 +55,6 @@ if(isset($_SESSION['u_id'])){
 	$kalender = new Kalender(1,2018);
 	$kalender->show();
 	?>
-
+-->
 	</body>
 </html>
