@@ -8,13 +8,14 @@
     <div class="register">
       <div class="form">
         <form action="php/register.php" method="POST">
-          <input type="text" name="mail" placeholder="E-mail">
           <input type="text" name="first" placeholder="Voornaam">
           <input type="text" name="last" placeholder="Achternaam">
-          <input type="checkbox" name="afwas" value="afwas" />Afwas
+          <input type="text" name="email" placeholder="E-mail">
+          <input type="password" name="pass" placeholder="Password">
+          <!--<input type="checkbox" name="afwas" value="afwas" />Afwas
           <input type="checkbox" name="bediening" value="bediening" />Bediening
-          <input type="checkbox" name="keuken" value="keuken" />Keuken
-          <button type="submit" name="submit">Registreer nieuwe werknemer</button>
+          <input type="checkbox" name="keuken" value="keuken" />Keuken-->
+          <button type="submit" name="register-submit">Registreer nieuwe werknemer</button>
         </form>
       </div>
     </div>

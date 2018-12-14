@@ -4,7 +4,7 @@ require 'php/kalender.php';
 if(session_status()!=PHP_SESSION_ACTIVE) {
 	session_start();
 }
-//Als SESSION een u_id heeft dan doorgestuurd naar home.php
+//Als SESSION een u_id heeft dan doorgestuurd naar dashboard.php
 if(isset($_SESSION['u_id'])){
 	header("Location: dashboard.php");
 }

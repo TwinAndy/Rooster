@@ -71,4 +71,3 @@ class Kalender {
 		echo $output;
 	}
 }
-?>
