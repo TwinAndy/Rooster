@@ -1,22 +1,22 @@
 <?php
 
 if(isset($_POST['submit'])){
-    
+
     include_once 'dbh.php';
-    
+
     $first = mysqli_real_escape_string($conn, $_POST['first']);
     $last = mysqli_real_escape_string($conn, $_POST['last']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $uid = mysqli_real_escape_string($conn, $_POST['uid']);
     $pass = mysqli_real_escape_string($conn, $_POST['pass']);
     $cpass = mysqli_real_escape_string($conn, $_POST['cpass']);
-    
+
     //pass small and number
     //admin
-    
+
     //Error handlers
     //Check empty fields
-    
+
     if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pass) || empty($cpass)){
         header("Location: ../accountcreation.php?signup=empty");
         exit();
@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
                 exit();
             }else{
                 //Check valid email
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                if(!filter_var($e mail, FILTER_VALIDATE_EMAIL)){
                     header("Location: ../accountcreation.php?signup=invalid_email");
                     exit();
                 } else{
@@ -49,12 +49,12 @@ if(isset($_POST['submit'])){
                         $sql = "SELECT * FROM users WHERE user_email='$email'";
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
-                        
+
                         if($resultCheck > 0){
                             header("Location: ../accountcreation.php?signup=email_taken");
                             exit();
                         }else{
-                            
+
                             //Hashing password
                             $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
                             //Generate verify code
@@ -62,12 +62,12 @@ if(isset($_POST['submit'])){
                             //Insert user in db
                             $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pass, user_code) VALUES ('$first', '$last', '$email', '$uid', '$hashedPass', '$code');";
                             mysqli_query($conn, $sql);
-                            
+
                             //send mail
                             /*
                             $to = $email;
                             $subject = "Account activation";
-                            
+
                             $message = "
                                 <html>
                                     <head>
@@ -79,14 +79,14 @@ if(isset($_POST['submit'])){
                                     </body>
                                 </html>
                             ";
-                            
+
                             $headers = "MIME-Version: 1.0" . "\r\n";
                             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                            
+
                             $headers .= 'From: <noreply@Angle.com>' . "\r\n";
                             mail($to,$subject,$message,$headers);
                             */
-                            
+
                             //leave
                             header("Location: ../accountcreation.php?signup=succes");
                             exit();
@@ -95,7 +95,7 @@ if(isset($_POST['submit'])){
                 }
             }
         }
-    } 
+    }
 } else{
     header("Location: ../accountcreation.php");
     exit();

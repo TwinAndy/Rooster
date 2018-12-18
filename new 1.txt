@@ -13,4 +13,4 @@ http://php.net/manual/en/language.oop5.basic.php
 
 
 
-https://www.youtube.com/watch?v=LC9GaXkdxF8 21:00
+https://www.youtube.com/watch?v=LC9GaXkdxF8 1:10:00
