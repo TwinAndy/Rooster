@@ -5,7 +5,7 @@ if(session_status()!=PHP_SESSION_ACTIVE) {
 	session_start();
 }
 //Als SESSION een u_id heeft dan doorgestuurd naar dashboard.php
-if(isset($_SESSION['u_id'])){
+if(isset($_SESSION['userId'])){
 	header("Location: dashboard.php");
 }
 //HOST = GEARHOST.
@@ -24,13 +24,11 @@ if(isset($_SESSION['u_id'])){
 					<p class="title">Log in</p>
 					<input type="text" name="uid" placeholder="E-mail"/>
 					<input type="password" name="pass" placeholder="Password"/>
-					<button type="submit" name="submit">Log in</button>
+					<button type="submit" name="login-submit">Log in</button>
 				</form>
-				<a href="signup.php">Sign up</a>
+				<a href="register.php">Sign up</a>
 
-				<form action="php/logout.php" method="POST">
-					<button type="submit" name="logout-submit">Log out</button>
-				</form>
+
 
 			</div>
 		</div>

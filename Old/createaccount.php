@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
                 exit();
             }else{
                 //Check valid email
-                if(!filter_var($e mail, FILTER_VALIDATE_EMAIL)){
+                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                     header("Location: ../accountcreation.php?signup=invalid_email");
                     exit();
                 } else{

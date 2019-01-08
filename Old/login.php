@@ -3,12 +3,12 @@
 if(session_status()!=PHP_SESSION_ACTIVE) {session_start();}
 
 if (isset($_POST['submit'])){
-    
+
     include 'dbh.php';
-    
+
     $uid = mysqli_real_escape_string($conn, $_POST['uid']);
     $pass = mysqli_real_escape_string($conn, $_POST['pass']);
-    
+
     //Error handler
     //Check empty
     if (empty($uid) || empty($pass)){
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])){
                     if($row['user_verified'] == 0){
                         $_SESSION['email_verify'] = 'no';
                         header("Location: ../index.php");
-                        exit();    
+                        exit();
                     }else{
                         //Log in the user
                     $_SESSION['u_id'] = $row['user_id'];
@@ -44,8 +44,8 @@ if (isset($_POST['submit'])){
                     header("Location: ../home.php?login=succes");
                     exit();
                     }
-                    
-                    
+
+
                 }
             }
         }
